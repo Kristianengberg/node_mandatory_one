@@ -10,7 +10,6 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./scripts/service.js"></script>
-
 </head>
 
 <body>
@@ -23,14 +22,34 @@
         </p>
         <h4>Designing your API</h4>
         <p>Before any implementation should begin, it is a good idea to create an overview of how your API should function</p>
-        <img src="./resources/api_design.JPG" class="rounded float-left" alt="new nodeJS and express project">
+        <img src="./resources/api_design.JPG" class="rounded float-left" alt="api_design">
+        <p>The above image shows us an overview of an API for creating, reading, updating and deleting a cars database. Note that not all of these endpoints and HTTP methods are used. For example, using the POST method with just /cars and the user specificying
+            what ID the car should have is not good practice</p>
         <h4>1. the GET method</h4>
-        <p>The GET method as the name suggests is a method that gets something. It could be an entire file or some sort of data</p>
-
+        <p>The GET method as the name suggests is a method that gets something. It could be an entire file or some sort of JSON, any data that you want to send to the user</p>
+        <p>This first example is a simple get method that gets all of our animes at the endpoint /anime_names</p>
+        <img src="./resources/appget1.JPG" class="rounded float-left" alt="app_get_1">
+        <p>The second get method gets a specific anime defined by an ID. This ID is directly taken from the URL that the user input. /anime_names/1 would get the anime with the ID of 1</p>
+        <p>By using the find method we are able to search our database for an anime with the correct ID. Note that we use === instead of == to make sure it is not a truthy value but a hard true value</p>
+        <img src="./resources/appget2.JPG" class="rounded float-left" alt="app_get_2">
         <h4>2. the POST method</h4>
-        <h4>3. the PUT method</h4>
-        <h4>4. the PATCH method</h4>
-        <h4>5. the DELETE method</h4>
+        <p>The post method is as well named because it posts something. It is used to create data</p>
+        <p>In the following method we use the endpoint /anime_name and use an HTTP post to send a new anime to the server inside the post body. Using
+            <a href="https://www.postman.com/" target="_blank" rel="noreferrer noopener">postman</a> we are able to test if this function works</p>
+        <img src="./resources/apppost.JPG" class="rounded float-left" alt="app_post">
+        <h4>3. the PUT/PATCH method</h4>
+        <p>The put/patch method are similar and are used to update already existing data</p>
+        <p>In the following example we use the endpoint /anime_names/id where the user specificies the ID in the URL and finds the object and updates it with the data in the body of the request</p>
+        <img src="./resources/apppatch.JPG" class="rounded float-left" alt="app_patch">
+        <h4>4. the DELETE method</h4>
+        <p>The delete method is as it is named, used to delete data</p>
+        <p>The user once again specifies what data should be deleted by accessing the endpoint /anime_names/id</p>
+        <img src="./resources/appdelete.JPG" class="rounded float-left" alt="app_delete">
+
+
+        <h2>Serving JSON is all fine, but what if we want to serve the user an html page? Click
+            <a href="/serving_files">here</a> to learn how to serve files in express
+        </h2>
     </div>
 
     <div id="footer"></div>

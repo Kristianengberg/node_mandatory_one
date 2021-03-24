@@ -8,8 +8,6 @@ const publicDir = __dirname;
 app.use(express.static('public'));
 
 
-
-
 app.get("/", (req, res) => {
     res.sendFile(publicDir + "/public/index.html");
 });
@@ -27,19 +25,22 @@ app.get("/serving_files", (req, res) => {
 });
 
 
-app.get("/tools", (req, res) => {
-    res.sendFile(publicDir + "/public/tools.html");
+app.get("/nodemon", (req, res) => {
+    res.sendFile(publicDir + "/public/nodemon.html");
 });
 
-// app.get();
+app.get("/postman", (req, res) => {
+    res.sendFile(publicDir + "/public/postman.html");
+});
 
-// app.post();
+app.get("/jquery", (req, res) => {
+    res.sendFile(publicDir + "/public/jquery.html");
+});
 
-// app.put();
+app.get("/javascript", (req, res) => {
+    res.sendFile(publicDir + "/public/javascript.html");
+});
 
-// app.patch();
-
-// app.delete();
 
 app.listen(port, () => {
     console.log("Server is running on", port);
