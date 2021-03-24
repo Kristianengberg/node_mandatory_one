@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+
+<head>
+    <title>nodeJS wiki - get started</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="./style/style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./scripts/service.js"></script>
+
+</head>
+
+<body>
+    <div id="navBar"></div>
+    <div id="bodyDiv">
+        <div>
+            <h2>Get Started</h2>
+            <h4>1. Intalling nodeJS</h4>
+            <p>Download the latest version of Node at
+                <a href="https://nodejs.org/en/download/" target="_blank" rel="noreferrer noopener">Download Node</a>
+            </p>
+            <p>After installation check if node has been installed on your computer</p>
+            <p>Open a terminal or powershell and type:</p>
+            <p id="code">node -v</p>
+            <p>check if NPM has also been installed</p>
+            <p id="code">npm -v</p>
+        </div>
+        <div>
+            <h4>2. Node and NPM has been installed correctly!</h4>
+            <p>It is now time to start a new node project</p>
+            <p>Open your favourite code editor</p>
+            <p>For this tutorial Visual Studio Code will be used</p>
+            <p>You should create the following two files. These will be the main files to start a new express and nodeJS project</p>
+            <img src="./resources/new_project.jpeg" class="rounded float-left" alt="new nodeJS and express project">
+            <p>Inside the package.json file you will want to write the following:</p>
+            <img src="./resources/dependencies.JPG" class="rounded float-left" alt="new nodeJS and express project">
+            <p>This will be the file that NPM looks at when we run the command to install our dependencies</p>
+            <p>Go ahead and navigate to your project folder in the terminal or powershell, mine will be the following</p>
+            <p id="code">cd .\Documents\GitHub\node_mandatory_one\</p>
+            <p>Now that you are in your project folder you want to run the NPM command to install dependencies</p>
+            <p id="code">npm install</p>
+            </br>
+            <p>This will now quickly install the node modules needed to run an express application</p>
+            <p>Inside of your app.js file you will want to put the following code:</p>
+            <img src="./resources/app_js.JPG" class="rounded float-left" alt="new nodeJS and express project">
+            <p>Note that the app.listen function is put at the bottom because node doesn't necessarily run in a synchronized order</p>
+            <img src="./resources/app_js2.JPG" class="rounded float-left" alt="new nodeJS and express project">
+            <p>You can now run your express app on port 8080. To run the app type the following into your terminal or powershell while in your project</p>
+            <p id="code">node app.js</p>
+            <h4>Thats it! You are now ready to start developing your express app and serve some webpages and all that juicy stuff</h4>
+        </div>
+        <div>
+            <h2>To start implementing some basic CRUD methods, you can go to the next page
+                <a href="/crud">here!</a>
+            </h2>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+</body>
+
+</html>
