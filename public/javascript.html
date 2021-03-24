@@ -17,9 +17,29 @@
     <div id="navBar"></div>
     <div id="bodyDiv">
         <h2>JavaScript</h2>
+        <a href="https://www.javascript.com/" target="_blank" rel="noreferrer noopener">JavaScript.com</a>
+        <p>JavaScript is the language of the internet and learning it is very important if you ever want to create web-applications</p>
+        <p>To include javascript into your HTML page so you can make use of functions that can change dynamically place it within the head tag of your HTML file.</p>
+        <p>As an example see the image below where I have referenced a script place in the resource folder. the ./ means that it is place within the same parent folder as the HTML file</p>
+        <img src="./resources/jsplacement.JPG" class="rounded float-left" alt="javascript_placement">
+
+        <p>As an example of JavaScript making elements dynamic you can see that if you refresh the page the time below updates</p>
+
+        <div>
+            <p id="timeexample"></p>
+        </div>
+
+        <p>By defining a script tag with our function time() in it we are able to dynamically update the page with the current time. Remember to also reference which HTML element you want the time to appear in. In this case its in the paragraph tag with
+            the ID of timeexample</p>
+        <img src="./resources/timeexample.JPG" class="rounded float-left" alt="javascript_placement">
     </div>
 
-    <div id="footer"></div>
+    <div id="footer">
+    </div>
+
+    <script>
+        time();
+    </script>
 </body>
 
 </html>
